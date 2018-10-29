@@ -1,0 +1,6 @@
+setwd("~/Learning/DS/Data Incubator/Challenge/project/inside_airbnb_austin")
+listings <- read.csv("listings.csv")
+with(listings, plot(review_scores_location, review_scores_rating))
+title(main = "Location and overall review scores for Airbnb listings in Autsin, TX")
+dev.copy(png, file = "location-overall-plot.png")
+dev.off()
